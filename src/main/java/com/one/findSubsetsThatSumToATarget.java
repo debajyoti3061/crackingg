@@ -19,6 +19,7 @@ public class findSubsetsThatSumToATarget {
     // If we reached end and sum is non-zero. We print
     // p[] only if arr[0] is equal to sun OR dp[0][sum]
     // is true.
+    //hot fix commit
     if (i == 0 && sum != 0 && dp[0][sum]) {
       p.add(arr[i]);
       display(p);
