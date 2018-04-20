@@ -20,6 +20,7 @@ public class findSubsetsThatSumToATarget {
     // p[] only if arr[0] is equal to sun OR dp[0][sum]
     // is true.
     //hot fix commit
+    //comit 2
     if (i == 0 && sum != 0 && dp[0][sum]) {
       p.add(arr[i]);
       display(p);
