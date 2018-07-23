@@ -9,6 +9,13 @@ public class TreeNode1 {
     val = x;
   }
 
+  public TreeNode1(int val, TreeNode1 left, TreeNode1 right) {
+    super();
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+
   public void preorder(TreeNode1 root){
     if (root!= null){
       System.out.println(root.val);
