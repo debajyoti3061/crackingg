@@ -4,6 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MinCoinsforTotalValue {
+  /**
+   * Top down dynamic programing. Using map to store intermediate results.
+   * Returns Integer.MAX_VALUE if total cannot be formed with given coins
+   */
   public int minimumCoinTopDown(int total, int coins[], Map<Integer, Integer> map) {
 
     //if total is 0 then there is nothing to do. return 0.

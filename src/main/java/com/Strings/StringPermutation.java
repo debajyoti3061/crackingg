@@ -54,6 +54,6 @@ public class StringPermutation {
 
   public static void main(String args[]) {
     StringPermutation sp = new StringPermutation();
-    sp.permute("AABC".toCharArray()).forEach(s -> System.out.println(s));
+    sp.permute("AABCB".toCharArray()).forEach(s -> System.out.println(s));
   }
 }
