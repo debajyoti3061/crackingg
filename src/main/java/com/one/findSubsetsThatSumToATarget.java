@@ -4,8 +4,7 @@ package com.one;
 import java.util.ArrayList;
 
 public class findSubsetsThatSumToATarget {
-  // dp[i][j] is going to store true if sum j is
-  // possible with array elements from 0 to i.
+
   static boolean[][] dp;
 
   static void display(ArrayList<Integer> v) {
@@ -19,8 +18,6 @@ public class findSubsetsThatSumToATarget {
     // If we reached end and sum is non-zero. We print
     // p[] only if arr[0] is equal to sun OR dp[0][sum]
     // is true.
-    //hot fix commit
-    //comit 2
     if (i == 0 && sum != 0 && dp[0][sum]) {
       p.add(arr[i]);
       display(p);
@@ -79,6 +76,12 @@ public class findSubsetsThatSumToATarget {
       return;
     }
 
+    for(int i =0;i<n;i++) {
+      for (int j = 0; j < sum + 1; j++) {
+        System.out.print(dp[i][j]+" ");
+      }
+      System.out.println();
+    }
     // Now recursively traverse dp[][] to find all
     // paths from dp[n-1][sum]
     ArrayList<Integer> p = new ArrayList<>();
@@ -87,7 +90,7 @@ public class findSubsetsThatSumToATarget {
 
   //Driver Program to test above functions
   public static void main(String args[]) {
-    int arr[] = {1, 2, 3, 4, 5};
+    int arr[] = {3,2,5,10,7};
     int n = arr.length;
     int sum = 10;
     printAllSubsets(arr, n, sum);
