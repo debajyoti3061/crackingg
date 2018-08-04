@@ -1,4 +1,4 @@
-package com.one;
+package com.dynamic.programming;
 
 
 import java.util.ArrayList;

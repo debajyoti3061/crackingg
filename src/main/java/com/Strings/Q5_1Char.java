@@ -1,4 +1,4 @@
-package com.one;
+package com.Strings;
 
 public class Q5_1Char {
 

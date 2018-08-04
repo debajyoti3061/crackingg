@@ -1,4 +1,4 @@
-package com.one;
+package com.Strings;
 
 import java.util.Collections;
 
