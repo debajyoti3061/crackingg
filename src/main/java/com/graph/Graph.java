@@ -1,4 +1,4 @@
-package com.graph.routebetweennodes;
+package com.graph;
 
 import java.util.Iterator;
 import java.util.LinkedList;
