@@ -1,7 +1,4 @@
-package com.tree.binarytreetolinkedlist;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
+package com.tree;
 
 public class BalancedTreefromSortedArray {
 

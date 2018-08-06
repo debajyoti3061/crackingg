@@ -1,4 +1,4 @@
-package com.tree.binarytreetolinkedlist;
+package com.tree;
 
 public class ReverseLevelOrderTraverse {
 }

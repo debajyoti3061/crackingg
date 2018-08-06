@@ -1,4 +1,4 @@
-package com.tree.binarytreetolinkedlist;
+package com.tree;
 
 import java.util.ArrayList;
 import java.util.Iterator;
