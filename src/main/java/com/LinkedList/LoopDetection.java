@@ -1,4 +1,4 @@
-package com.LinkedList.two.one;
+package com.LinkedList;
 
 public class LoopDetection {
 

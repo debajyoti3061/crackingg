@@ -1,7 +1,6 @@
-package com.LinkedList.two.one;
+package com.LinkedList;
 
 import java.util.Hashtable;
-import java.util.Iterator;
 
 public class DeleteDups {
 
