@@ -33,6 +33,7 @@ public class ReverseLevelOrderTraverse {
     }
     while(!s.isEmpty()){
       System.out.println(s.pop().val);
+      System.out.println("commit");
     }
   }
 }
