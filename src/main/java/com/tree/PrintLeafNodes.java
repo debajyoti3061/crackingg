@@ -15,7 +15,7 @@ public class PrintLeafNodes {
     }
 
     private static TreeNode1 printleaf(TreeNode1 root) {
-        if(root == null) return root;
+        if(root == null) return null;
         if(root.left == null && root.right== null)
             System.out.println(root.val);
         root.left = printleaf(root.left);

@@ -23,12 +23,13 @@ public class LevelOrderTraversal {
     while(!queue.isEmpty()){
       root = queue.poll();
       System.out.println(root.val);
-      if (root.left != null){
+      if (root.left != null) {
         queue.add(root.left);
+      }
       if (root.right != null){
         queue.add(root.right);
       }
-      }
+
 
     }
 
