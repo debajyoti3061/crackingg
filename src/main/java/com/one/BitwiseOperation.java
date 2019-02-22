@@ -28,5 +28,12 @@ public class BitwiseOperation {
 
     c = a >>> 3;      /* 15 = 0000 1111 */
     System.out.println("a >>> 2 = " + c );
+
+    System.out.println(Integer.toBinaryString(121));
+// prints "1111001"
+    System.out.println(-121 >> 1);
+// prints "111100"
+    System.out.println(-121 >>> 1);
+// prints "111100"
   }
 }
