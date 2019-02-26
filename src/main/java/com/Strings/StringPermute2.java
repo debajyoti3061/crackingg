@@ -23,6 +23,6 @@ public class StringPermute2 {
 
     public static void main(String[] args)
     {
-        StringPermutation("JSP");
+        StringPermutation("Geeks");
     }
 }

@@ -1,6 +1,6 @@
 package com.LinkedList;
 
-import java.util.Hashtable;
+import java.util.HashMap;
 
 public class DeleteDups {
 
@@ -22,7 +22,7 @@ public class DeleteDups {
 
 
   public static void deleteDups(LinkedListNode1 n) {
-    Hashtable table = new Hashtable();
+    HashMap table = new HashMap();
     LinkedListNode1 previous = null;
     while (n != null) {
       if (table.containsKey(n.data)) {
