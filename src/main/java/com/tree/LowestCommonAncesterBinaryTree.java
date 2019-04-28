@@ -10,8 +10,9 @@ public class LowestCommonAncesterBinaryTree {
                         new TreeNode1(8, null, null), new TreeNode1(15,
                         new TreeNode1(14, null, null), null)));
 
-       TreeNode1 common = lca(9,14);
-        System.out.println(common.val);
+       TreeNode1 common = lca(90,100);
+       if (common ==null) System.out.println("no common");
+       else System.out.println(common.val);
     }
 
     private static TreeNode1 lca(int n1, int n2) {
@@ -27,8 +28,10 @@ public class LowestCommonAncesterBinaryTree {
         TreeNode1 left = lca (root.left,n1,n2);
         TreeNode1 right = lca (root.right,n1,n2);
         if (left!= null && right !=null) return root;
-        if (left!= null) return left;
+        if (left == null && right ==null) return null;
+        if (left!= null && right ==null) return left;
         else return right;
+
     }
 
 

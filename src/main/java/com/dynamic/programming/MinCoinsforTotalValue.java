@@ -22,7 +22,7 @@ public class MinCoinsforTotalValue {
     for(int j=0; j < coins.length; j++){
       for(int i=1; i <= total; i++){
         if(i >= coins[j]){
-          if (T[i - coins[j]] + 1 < T[i]) {
+          if (1+T[i - coins[j]]  < T[i]) {
             T[i] = 1 + T[i - coins[j]];
             R[i] = j;
           }

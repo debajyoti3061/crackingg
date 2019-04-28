@@ -3,7 +3,7 @@ package com.dynamic.programming;
 
 import java.util.ArrayList;
 
-public class findSubsetsThatSumToATarget {
+public class  findSubsetsThatSumToATarget {
 
   static boolean[][] dp;
 
