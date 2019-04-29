@@ -38,7 +38,7 @@ public class LongestPalinSubstring
         for (int k = 3; k <= n; ++k) {
 
             // Fix the starting index
-            for (int i = 0; i < n - k + 1; ++i)
+            for (int i = 0; i <= n - k ; ++i)
             {
                 // Get the ending index of substring from
                 // starting index i and length k

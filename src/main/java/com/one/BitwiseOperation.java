@@ -35,5 +35,7 @@ public class BitwiseOperation {
 // prints "111100"
     System.out.println(-121 >>> 1);
 // prints "111100"
+    c = a^b^a;
+    System.out.println("a^a"+c);
   }
 }
