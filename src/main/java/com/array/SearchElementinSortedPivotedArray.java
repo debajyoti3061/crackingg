@@ -11,6 +11,7 @@ package com.array;
  * (1will go in else as 1< 0th element(3))
  * 3)If element is found in selected sub-array then return index
  * Else return-1.
+ * log n
  */
 public class SearchElementinSortedPivotedArray {
   //https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/
@@ -59,7 +60,7 @@ public class SearchElementinSortedPivotedArray {
     int arr1[] = {5, 6, 7, 8, 9, 10, 1, 2, 3};
     int n = arr1.length;
     int key = 3;
-    System.out.println("Index of the"+key+ "is : "
+    System.out.println("Index of the "+key+ " sis : "
         + pivotedBinarySearch(arr1, n, key));
   }
 }
