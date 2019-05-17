@@ -29,19 +29,32 @@ public class KthLargestElementQuickSelect {
     arr[] --> Array to be sorted,
     low  --> Starting index,
     high  --> Ending index */
-  int sort(int arr[], int low, int high , int index)
-  {
-    if (low < high) {
+  int sort(int arr[], int low, int high , int index){
+    if (index > 0 && index <= high - low + 1)
+    {
+      // Partition the array around last
+      // element and get position of pivot
+      // element in sorted array
       int pi = partition(arr, low, high);
-      if (pi == index) {
-        return arr[pi];
-      }
 
-      if (pi > index) return sort(arr, low, pi - 1, index);
-      else return sort(arr, pi + 1, high, index);
+      // If position is same as k
+      if (pi-low == index-1)
+        return arr[pi];
+
+      // If position is more, recur for
+      // left subarray
+      if (pi-low > index-1)
+        return sort(arr, low, pi-1, index);
+
+      // Else recur for right subarray
+      return sort(arr, pi+1, high, index-pi+low-1);
     }
+
+    // If k is more than number of elements
+    // in array
     return Integer.MAX_VALUE;
   }
+
 
 
 
@@ -51,7 +64,7 @@ public class KthLargestElementQuickSelect {
     int n = arr.length;
 
     KthLargestElementQuickSelect ob = new KthLargestElementQuickSelect();
-    System.out.print(ob.sort(arr, 0, n-1 , 2));
+    System.out.print(ob.sort(arr, 0, n-1 , 8));
 
   }
 }
