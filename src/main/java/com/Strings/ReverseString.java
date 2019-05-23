@@ -12,5 +12,20 @@ public class ReverseString {
   public static void main(String a[]){
     ReverseString srr = new ReverseString();
     System.out.println("Result: "+srr.reverseString("Java2novice"));
+
+    System.out.println("iterative :"+ reverse("java"));
+  }
+
+  public static String reverse(String str){
+    char[] output=str.toCharArray();
+    int j = str.length()-1;
+    for(int i=0;i<str.length()/2;i++){
+      char temp = output[i];
+      output[i]= output[j];
+      output[j]= temp;
+      j--;
+    }
+    //System.out.println(output);
+    return String.valueOf(output);
   }
 }
