@@ -1,6 +1,9 @@
 package com.tree;
 
 public class LeftViewBinaryTree {
+    TreeNode1 root;
+    static int  max_left_level = 0;
+    static int  max_right_level = 0;
 
     public static void main(String args[]) {
         TreeNode1 root;
@@ -8,18 +11,41 @@ public class LeftViewBinaryTree {
                 new TreeNode1(10,null,null),
                 new TreeNode1(30, new TreeNode1(20,null,null),new TreeNode1(40,null,null)));
 
-        int maxLevel = 0;
-        leftview(root,1,maxLevel);
+        leftView(root,1);
+        System.out.println();
+        rightView(root,1);
     }
 
-    private static void leftview(TreeNode1 root, int level, int maxLevel) {
-        if(root==null) return ;
-        if(maxLevel<level){
-            System.out.println(root.val);
-            maxLevel=level;
+    private static void rightView(TreeNode1 node, int level) {
+        if (node==null) return;
+
+        // If this is the first node of its level
+        if (max_right_level < level)
+        {
+            System.out.print(" " + node.val);
+            max_right_level = level;
         }
-        leftview(root.left,level+1,maxLevel);
-        leftview(root.right,level+1,maxLevel);
+
+        // Recur for left and right subtrees
+        rightView(node.right, level+1);
+        rightView(node.left, level+1);
+    }
+
+    static void leftView(TreeNode1 node, int level)
+    {
+        // Base Case
+        if (node==null) return;
+
+        // If this is the first node of its level
+        if (max_left_level < level)
+        {
+            System.out.print(" " + node.val);
+            max_left_level = level;
+        }
+
+        // Recur for left and right subtrees
+        leftView(node.left, level+1);
+        leftView(node.right, level+1);
     }
 }
 //https://www.geeksforgeeks.org/print-nodes-distance-k-given-node-binary-tree/
