@@ -2,17 +2,19 @@ package com.array;
 
 public class StockBuySell {
   public static void main(String args[]){
-    int arr[]={1,3,3,5,6,2};
+    int arr[]={1,3,8,5,6,2};
     System.out.println(maxProfit(arr));
   }
 
   private static int maxProfit(int[] arr) {
-    int max= 0;
-    int min = Integer.MAX_VALUE;
-    for(int i=0;i<arr.length;i++){
-      if(arr[i]<min) min=arr[i];
-      else max= Integer.max(max,arr[i]-min);
+    if(arr==null ||arr.length==0) return 0;
+    int profit=0;
+    for(int i=0;i<arr.length-1;i++){
+      if(arr[i+1]>arr[i]){
+        profit+=arr[i+1]-arr[i];
+      }
     }
-    return max;
+
+    return profit;
   }
 }
