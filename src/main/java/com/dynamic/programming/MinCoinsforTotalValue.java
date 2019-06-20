@@ -38,22 +38,20 @@ public class MinCoinsforTotalValue {
       System.out.print("No solution is possible");
       return;
     }
-    int start = R.length - 1;
+    int total = R.length - 1;
     System.out.print("Coins used to form total ");
-    while ( start != 0 ) {
-      int j = R[start];
-      System.out.print(coins[j] + " ");
-      start = start - coins[j];
+    while ( total != 0 ) {
+     // int j =;
+      System.out.print(coins[ R[total]] + " ");
+      total = total - coins[ R[total]];
     }
     System.out.print("\n");
   }
 
   public static void main ( String args[] ) {
-    int total = 13;
-    int coins[] = {7, 3, 2, 6};
+    int total = 14;
+    int coins[] = {10,7, 3, 2, 6};
     MinCoinsforTotalValue cc = new MinCoinsforTotalValue();
-    Map<Integer, Integer> map = new HashMap<>();
-    //int topDownValue = cc.minimumCoinTopDown(total, coins, map);
     int bottomUpValue = cc.minimumCoinBottomUp(total, coins);
 
     System.out.print(String.format("Bottom up and top down result %s ", bottomUpValue));
