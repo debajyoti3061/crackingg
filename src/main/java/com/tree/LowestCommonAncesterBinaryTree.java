@@ -29,7 +29,7 @@ public class LowestCommonAncesterBinaryTree {
         TreeNode1 right = lca (root.right,n1,n2);
         if (left!= null && right !=null) return root;
         if (left == null && right ==null) return null;
-        if (left!= null && right ==null) return left;
+        if (left!= null ) return left;
         else return right;
 
     }

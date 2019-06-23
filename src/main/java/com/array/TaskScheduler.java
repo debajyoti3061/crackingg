@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 public class TaskScheduler {
-    public int leastInterval(char[] tasks, int n) {
+    public static int leastInterval(char[] tasks, int n) {
         int[] map = new int[26];
         for(char task : tasks){
             map[task-'A']++;
@@ -41,5 +41,11 @@ public class TaskScheduler {
             }
         }
         return time;
+    }
+
+    public static void main(String args[]){
+        char[] arr={'A','A','B','C','B','D','C','C','A','B','A','A'};
+        int time=2;
+        System.out.println(leastInterval(arr,time));
     }
 }
