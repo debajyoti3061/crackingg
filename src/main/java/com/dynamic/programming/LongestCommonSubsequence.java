@@ -17,12 +17,6 @@ public class LongestCommonSubsequence {
 
     public int lcsDynamic(char str1[],char str2[]){
 
-
-        int temp[][] = new int[str1.length + 1][str2.length + 1];
-                int max = 0;
-                for(int i=1; i < temp.length; i++){
-                    for(int j=1; j < temp[i].length; j++){
-
         int dp[][] = new int[str1.length + 1][str2.length + 1];
         int max = 0;
         for(int i=1; i < dp.length; i++){
