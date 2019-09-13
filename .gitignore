@@ -5,3 +5,5 @@ target/
 .project
 Cracking.iml
 CrackingInterview.iml
+.idea/
+.settings/

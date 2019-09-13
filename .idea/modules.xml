@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Cracking.iml" filepath="$PROJECT_DIR$/Cracking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/crackingg.iml" filepath="$PROJECT_DIR$/.idea/crackingg.iml" />
+      <module fileurl="file://D:/react testing/react testing.iml" filepath="D:/react testing/react testing.iml" />
     </modules>
   </component>
 </project>
