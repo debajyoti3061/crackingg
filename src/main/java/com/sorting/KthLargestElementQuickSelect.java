@@ -37,7 +37,7 @@ public class KthLargestElementQuickSelect {
       // element in sorted array
       int pi = partition(arr, low, high);
 
-      // If position is same as k
+      // If position is same as index
       if (pi-low == index-1)
         return arr[pi];
 
@@ -47,7 +47,7 @@ public class KthLargestElementQuickSelect {
         return sort(arr, low, pi-1, index);
 
       // Else recur for right subarray
-      return sort(arr, pi+1, high, index-pi+low-1);
+      return sort(arr, pi+1, high, index-1-pi+low);
     }
 
     // If k is more than number of elements

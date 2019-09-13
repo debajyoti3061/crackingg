@@ -2,6 +2,8 @@ package com.dynamic.programming;
 //https://www.youtube.com/watch?v=CE2b_-XfVDk
 //https://github.com/mission-peace/interview/blob/master/src/com/interview/dynamic/LongestIncreasingSubsequence.java
 
+import java.util.Arrays;
+
 /**
  * Date 05/02/2014
  * @author tusroy
@@ -47,6 +49,8 @@ public class LongestIncreasingSubsequence {
       }
     }
 
+    System.out.println(Arrays.toString(T));
+    System.out.println(Arrays.toString(actualSolution));
     //find the index of max number in T
     int maxIndex = 0;
     for(int i=0; i < T.length; i++){
@@ -74,7 +78,8 @@ public class LongestIncreasingSubsequence {
 
   public static void main(String args[]){
     LongestIncreasingSubsequence lis = new LongestIncreasingSubsequence();
-    int arr[] = {23,10,22,5,33,8,9,21,50,41,60,80,99, 22,23,24,25,26,27};
+    int arr[] = {3,4,-1,0,6,2,3};
+    System.out.println(Arrays.toString(arr));
     int result = lis.longestSubsequenceWithActualSolution(arr);
     System.out.println(result);
 

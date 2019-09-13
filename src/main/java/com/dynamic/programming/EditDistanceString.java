@@ -48,7 +48,7 @@ public class EditDistanceString {
     public static void main(String args[])
     {
         String str1 = "sunday";
-        String str2 = "saturday";
+        String str2 = "snoday";
         System.out.println( editDistDP( str1 , str2 , str1.length(), str2.length()) );
     }
 }

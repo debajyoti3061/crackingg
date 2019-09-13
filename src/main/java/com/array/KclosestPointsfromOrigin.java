@@ -52,8 +52,6 @@ public class KclosestPointsfromOrigin {
 
     @Override
     public int compareTo(QNode n) {
-        if (distance>n.distance) return 1;
-        else if (distance<n.distance) return -1;
-        else return 0;
+      return Double.compare(distance, n.distance);
     }
 }

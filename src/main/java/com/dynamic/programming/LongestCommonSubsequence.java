@@ -21,6 +21,7 @@ public class LongestCommonSubsequence {
         int max = 0;
         for(int i=1; i < dp.length; i++){
             for(int j=1; j < dp[i].length; j++){
+
                 if(str1[i-1] == str2[j-1]) {
                     dp[i][j] = dp[i - 1][j - 1] + 1;
                 }
