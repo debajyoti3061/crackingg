@@ -11,12 +11,13 @@ public class MeetinRoom {
   }
 
   private static int findsize(int[][] input) {
-    Arrays.sort(input, new Comparator<int[]>() {
+   /* Arrays.sort(input, new Comparator<int[]>() {
       @Override
       public int compare(int[] o1, int[] o2) {
         return Integer.compare(o1[0],o2[0]);
       }
-    });
+    });*/
+    Arrays.sort(input, (o1, o2) -> Integer.compare(o1[0],o2[0]));
 
     PriorityQueue<Integer> pq = new PriorityQueue<>();
     pq.add(input[0][1]);

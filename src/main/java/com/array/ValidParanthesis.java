@@ -30,7 +30,6 @@ public class ValidParanthesis {
         else return false;
       }
     }
-    if(stack.size() ==0) return true;
-    return false;
+    return stack.size() == 0;
   }
 }
