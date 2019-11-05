@@ -1,44 +1,31 @@
 package com.array;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class TaskScheduler {
     public static int leastInterval(char[] tasks, int n) {
+
         int[] map = new int[26];
         for(char task : tasks){
             map[task-'A']++;
         }
-        PriorityQueue<Integer> pq = new PriorityQueue<>((a, b)->b-a);
-        /*PriorityQueue<Integer> pq = new PriorityQueue<Integer>(new Comparator<Integer>(){
-            @Override
-            public int compare(Integer a, Integer b){
-                return b-a;
-            }
-        });*/
 
-        for(int count: map){
-            if(count > 0)
-                pq.add(count);
-        }
+        Arrays.sort(map);
         int time = 0;
-        while(!pq.isEmpty()){
-            int i = 0;
-            List<Integer> temp = new LinkedList<>();
-            while(i <= n){
-                if(!pq.isEmpty()){
-                    int count = pq.poll()-1;
-                    if(count > 0)
-                        temp.add(count);
-                }
-                i++;
+        while(map[25]>0){
+
+            int i=0;
+            int j=25;
+            while(i<=n && map[j]>0){
+                map[j]--;
                 time++;
-                if(temp.size() == 0) break;
+                i++;
+                j= j==0?25:j-1;
             }
-            for(int count : temp){
-                pq.add(count);
-            }
+
+            Arrays.sort(map);
+            if(map[25] == 0) break;
+            time = time +n-i+1;
         }
         return time;
     }

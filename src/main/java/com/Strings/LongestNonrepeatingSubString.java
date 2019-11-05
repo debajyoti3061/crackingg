@@ -5,26 +5,29 @@ import java.util.Set;
 
 public class LongestNonrepeatingSubString {
     public static void main(String args[]){
-        String x= "abcdedf";
+        String x= "bbbbb";
         System.out.println(findlongest(x));
     }
 
-    private static int findlongest(String x) {
-        int start =0;
-        int end=0;
-        int max=0;
-        Set<Character> set= new HashSet<>();
-        while(end<x.length()){
-            if(set.add(x.charAt(end))){
-                max = Math.max(max,end-start);
-            }else{
-                set.remove(x.charAt(start));
-                start++;
+    private static int findlongest(String s) {
+        int n=s.length();
+        Set<Character> set=new HashSet<Character>();
+        int i=0;
+        int j=0;
+        int ans=0;
+        while(i<n && j<n){
+
+            if(set.add(s.charAt(j))){
+                ans=Math.max(ans, j-i+1);
+                j++;
+            } else{
+                set.remove(s.charAt(i));
+                i++;
             }
-            end++;
+
         }
 
-        return max;
+        return ans;
     }
 
 }
