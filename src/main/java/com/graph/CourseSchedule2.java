@@ -10,24 +10,24 @@ public class CourseSchedule2 {
         System.out.println(Arrays.toString(ans));
     }
     public static int[] findOrder(int numCourses, int[][] prerequisites) {
-    ArrayList[] graph = new ArrayList[numCourses];
+    ArrayList[] adj = new ArrayList[numCourses];
     int[] res = new int[numCourses];
     Set hs = new HashSet();
     int index = 0;
 
     for(int i=0;i<numCourses;i++)
-        graph[i] = new ArrayList();
+        adj[i] = new ArrayList();
 
     boolean[] visited = new boolean[numCourses];
     for(int i=0; i<prerequisites.length;i++){
-        graph[prerequisites[i][0]].add(prerequisites[i][1]);
+        adj[prerequisites[i][0]].add(prerequisites[i][1]);
     }
 
     for(int i=0; i<numCourses; i++){
         if(hs.contains(i))
             continue;
         Stack stack = new Stack();
-        if(!dfs(graph,visited,i,stack,hs))
+        if(!dfs(adj,visited,i,stack,hs))
             return (new int[0]);
         while(stack.size()!=0){
             int temp = (int)stack.pop();
@@ -40,7 +40,7 @@ public class CourseSchedule2 {
     return res;
 }
 
-    private static boolean dfs(ArrayList[] graph, boolean[] visited, int course, Stack stack, Set hs){
+    private static boolean dfs(ArrayList[] adj, boolean[] visited, int course, Stack stack, Set hs){
         if(visited[course])
             return false;
         else{
@@ -52,8 +52,8 @@ public class CourseSchedule2 {
             }
         }
 
-        for(int i=0; i<graph[course].size();i++){
-            if(!dfs(graph,visited,(int)graph[course].get(i),stack,hs))
+        for(int i=0; i<adj[course].size();i++){
+            if(!dfs(adj,visited,(int)adj[course].get(i),stack,hs))
                 return false;
         }
         visited[course] = false;

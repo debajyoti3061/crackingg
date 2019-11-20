@@ -12,20 +12,20 @@ public class DeleteNode {
 	    node2.next = node3;
 	    node3.next = null;
 	    
-	    deleteNode(node1);
+	    deleteNode(head,node2);
 	    while(head !=null){
 				System.out.println(head.data);
 				head = head.next;
 			}
 	}
 
-	private static void deleteNode(LinkedListNode1<Integer> node) {
-		/*node.data=(Integer) node.next.data;
-		node.next= node.next.next;*/
-		LinkedListNode1<Integer> next = node.next;
-		node.data= next.data;
-		node.next = next.next;
-		
+	private static void deleteNode(LinkedListNode1<Integer> head,LinkedListNode1<Integer> node) {
+		LinkedListNode1 fast = head.next;
+		while(fast != node){
+			fast = fast.next;
+			head = head.next;
+		}
+		head.next = node.next;
 	}
 
 }
