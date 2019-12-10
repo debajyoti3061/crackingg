@@ -38,8 +38,7 @@ public class ArrayRotationbyReversal {
   /* function to print an array */
   static void printArray(int arr[])
   {
-    for (int i = 0; i < arr.length; i++)
-      System.out.print(arr[i] + " ");
+      for (int anArr : arr) System.out.print(anArr + " ");
   }
 
   /* Driver program to test above functions */

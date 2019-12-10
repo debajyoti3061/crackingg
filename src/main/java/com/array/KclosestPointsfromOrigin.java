@@ -8,9 +8,9 @@ public class KclosestPointsfromOrigin {
         //int [][] points={{1,1},{-9,-9},{-10,-7},{8,9}};
         int K = 7;
         int results[][]= kClosest(points,K);
-        for(int i=0;i<results.length;i++) {
-            for (int j = 0; j < results[i].length; j++) {
-                System.out.print(results[i][j] + ",");
+        for (int[] result : results) {
+            for (int j = 0; j < result.length; j++) {
+                System.out.print(result[j] + ",");
             }
             System.out.println();
         }

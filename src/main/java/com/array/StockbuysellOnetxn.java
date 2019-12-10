@@ -9,13 +9,13 @@ public class StockbuysellOnetxn {
   private static int maxProfit(int[] arr) {
     int max=0;
     int min = Integer.MAX_VALUE;
-    for(int i =0;i<arr.length;i++){
-      if(arr[i]<min){
-        min = arr[i];
-      }else {
-        max = Math.max(max,arr[i]-min);
+      for (int anArr : arr) {
+          if (anArr < min) {
+              min = anArr;
+          } else {
+              max = Math.max(max, anArr - min);
+          }
       }
-    }
     return max;
   }
 }
