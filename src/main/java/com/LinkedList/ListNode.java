@@ -1,7 +1,7 @@
 package com.LinkedList;
 
-public class ListNode {
-      int val;
+public class ListNode<E> {
+      E val;
       ListNode next;
-      ListNode(int x) { val = x; }
+      ListNode(E x) { val = x; next=null;}
 }
