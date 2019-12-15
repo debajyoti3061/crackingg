@@ -23,4 +23,14 @@ public class TreeNode1 {
       preorder(root.right);
     }
   }
+
+
+  public void inorder(TreeNode1 root){
+    if (root!= null){
+
+      inorder(root.left);
+      System.out.println(root.val);
+      inorder(root.right);
+    }
+  }
 }

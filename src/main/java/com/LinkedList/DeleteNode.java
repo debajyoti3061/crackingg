@@ -25,7 +25,7 @@ public class DeleteNode {
 			fast = fast.next;
 			head = head.next;
 		}
-		head.next = node.next;
+		head.next = fast.next;
 	}
 
 }

@@ -24,7 +24,7 @@ public class LoopDetection {
       LinkedListNode1<java.lang.Integer> head) {
     LinkedListNode1 slow = head;
     LinkedListNode1 fast = head;
-    while (head.next != null) {
+    while (fast.next != null && fast.next.next!= null) {
       slow = slow.next;
       fast = fast.next.next;
       if (slow == fast) {

@@ -21,7 +21,7 @@ public class IsBST {
 
     private static boolean isBST(TreeNode1 root, int minValue, int maxValue) {
         if (root == null) return true;
-        else  if (root.val <= minValue || root.val> maxValue)
+        else  if (root.val <= minValue || root.val>= maxValue)
             return false;
         return isBST(root.left,minValue,root.val) && isBST(root.right,root.val,maxValue);
     }

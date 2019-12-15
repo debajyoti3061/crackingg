@@ -7,6 +7,8 @@ public class HouseRobber {
     }
 
     private static int rob(int[] money) {
+        if(money.length ==0) return 0;
+        if(money.length ==1) return money[0];
         int[] dp=new int[money.length];
         dp[0]=money[0];
         dp[1]=Math.max(money[0],money[1]);

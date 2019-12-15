@@ -19,6 +19,18 @@ public class ArrayRotationbyReversal {
     rvereseArray(arr, d, n-1);
     rvereseArray(arr, 0, n-1);
   }
+  /**
+   *  right rotate
+   *  if(nums == null || nums.length < 2){
+   return;
+   }
+
+   k = k % nums.length;
+   reverse(nums, 0, n - d - 1);
+   reverse(nums, n-d, n - 1);
+   reverse(nums, 0, n - 1);
+
+   */
 
   /*Function to reverse arr[] from index start to end*/
   static void rvereseArray(int arr[], int start, int end)
@@ -54,4 +66,6 @@ public class ArrayRotationbyReversal {
     leftRotate(arr, d); // Rotate array by d
     printArray(arr);
   }
+
+
 }
