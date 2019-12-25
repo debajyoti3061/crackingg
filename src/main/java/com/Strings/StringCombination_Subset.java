@@ -7,10 +7,10 @@ public class StringCombination_Subset {
   public void combinationEasy(char[] input) {
     List<Character> r = new ArrayList<>();
     Arrays.sort(input);
-    combinationEasy(input, 0, r);
+    backtrack(input, 0, r);
   }
 
-  private void combinationEasy(char[] input, int pos, List<Character> r) {
+  private void backtrack(char[] input, int pos, List<Character> r) {
 
     r.forEach(r1 -> System.out.print(r1 + " "));
     System.out.println();
@@ -19,7 +19,7 @@ public class StringCombination_Subset {
         continue;
       }
       r.add(input[i]);
-      combinationEasy(input, i + 1, r);
+      backtrack(input, i + 1, r);
       r.remove(r.size() - 1);
     }
   }

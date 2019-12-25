@@ -1,8 +1,7 @@
 package com.dynamic.programming;
 
 public class EditDistanceString {
-    static int editDistDP(String str1, String str2, int m, int n)
-    {
+    static int editDistDP(String str1, String str2, int m, int n){
         // Create a table to store results of subproblems
         int dp[][] = new int[m+1][n+1];
 
