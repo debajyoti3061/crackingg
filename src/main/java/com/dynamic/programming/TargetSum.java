@@ -19,6 +19,14 @@ package com.dynamic.programming;
  There are 5 ways to assign symbols to make the sum of nums be target 3.
  */
 public class TargetSum {
+    /**
+     *                   sum(P) - sum(N) = target
+     sum(P) + sum(N) + sum(P) - sum(N) = target + sum(P) + sum(N)
+                        2 * sum(P) = target + sum(nums)
+     So the original problem has been converted to a subset sum problem as follows:
+     Find a subset P of nums such that sum(P) = (target + sum(nums)) / 2
+     * @param args
+     */
     public static void main(String args[]){
         int nums[]={1, 1, 1, 1, 1};
         int s=3;
