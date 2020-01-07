@@ -5,20 +5,19 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Permutation {
-
+    static List<List<Integer>> list = new ArrayList<>();
     public static void main(String[] args){
         int nums[]={1,2,0};
         permuteUnique(nums).stream().forEach(System.out::println);
     }
 
     public static List<List<Integer>> permuteUnique(int[] nums) {
-        List<List<Integer>> list = new ArrayList<>();
         Arrays.sort(nums);
-        backtrack(list, new ArrayList<>(), nums, new boolean[nums.length]);
+        backtrack(  nums, new boolean[nums.length],new ArrayList<>());
         return list;
     }
 
-    private static void  backtrack(List<List<Integer>> list, List<Integer> tempList, int [] nums, boolean [] used){
+    private static void  backtrack(  int [] nums, boolean [] used,List<Integer> tempList){
         if(tempList.size() == nums.length){
             list.add(new ArrayList<>(tempList));
         } else{
@@ -26,7 +25,7 @@ public class Permutation {
                 if(used[i] || i > 0 && nums[i] == nums[i-1] && !used[i - 1]) continue;
                 used[i] = true;
                 tempList.add(nums[i]);
-                backtrack(list, tempList, nums, used);
+                backtrack( nums, used,tempList);
                 used[i] = false;
                 tempList.remove(tempList.size() - 1);
             }
