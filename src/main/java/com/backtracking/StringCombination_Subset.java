@@ -1,4 +1,4 @@
-package com.Strings;
+package com.backtracking;
 
 import java.util.*;
 
