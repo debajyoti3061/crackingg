@@ -1,20 +1,18 @@
 package com.Strings;
 
 public class IsStringSubSequence {
-    static boolean isSubSequence(String str1, String str2, int m, int n)
+    static boolean isSubSequence(String s, String t)
     {
-        // Base Cases
-        if (m == 0)
-            return true;
-        if (n == 0)
-            return false;
-
-        // If last characters of two strings are matching
-        if (str1.charAt(m-1) == str2.charAt(n-1))
-            return isSubSequence(str1, str2, m-1, n-1);
-
-        // If last characters are not matching
-        return isSubSequence(str1, str2, m, n-1);
+        if (s.length() == 0) return true;
+        int indexS = 0, indexT = 0;
+        while (indexT < t.length()) {
+            if (t.charAt(indexT) == s.charAt(indexS)) {
+                indexS++;
+                if (indexS == s.length()) return true;
+            }
+            indexT++;
+        }
+        return false;
     }
 
     // Driver program
@@ -22,9 +20,8 @@ public class IsStringSubSequence {
     {
         String str1 = "gksrek";
         String str2 = "geeksforgeeks";
-        int m = str1.length();
-        int n = str2.length();
-        boolean res = isSubSequence(str1, str2, m, n);
+
+        boolean res = isSubSequence(str1, str2);
         if(res)
             System.out.println("Yes");
         else

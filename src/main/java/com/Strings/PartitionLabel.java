@@ -16,23 +16,29 @@ import java.util.List;
  * A partition like "ababcbacadefegde", "hijhklij" is incorrect, because it splits S into less parts.
  */
 public class PartitionLabel {
+
+
   public static List<Integer> partitionLabels(String S) {
-    List<Integer> partitionLengths = new ArrayList<>();
-    int[] lastIndexes = new int[26];
-    for (int i = 0; i < S.length(); i++) {
-      lastIndexes[S.charAt(i) - 'a'] = i;
+    if(S == null || S.length() == 0){
+      return null;
     }
-    int i = 0;
-    while (i < S.length()) {
-      int end = lastIndexes[S.charAt(i) - 'a'];
-      int j = i;
-      while (j != end) {
-        end = Math.max(end, lastIndexes[S.charAt(j++) - 'a']);
+    List<Integer> list = new ArrayList<>();
+    int[] map = new int[26];  // record the last index of the each char
+
+    for(int i = 0; i < S.length(); i++){
+      map[S.charAt(i)-'a'] = i;
+    }
+    // record the end index of the current sub string
+    int last = 0;
+    int start = 0;
+    for(int i = 0; i < S.length(); i++){
+      last = Math.max(last, map[S.charAt(i)-'a']);
+      if(last == i){
+        list.add(last - start + 1);
+        start = last + 1;
       }
-      partitionLengths.add(j - i + 1);
-      i = j + 1;
     }
-    return partitionLengths;
+    return list;
   }
 
   public static void main(String[] args) {

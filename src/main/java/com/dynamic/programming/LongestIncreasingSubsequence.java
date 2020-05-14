@@ -66,6 +66,7 @@ public class LongestIncreasingSubsequence {
       t = newT;
       System.out.print(arr[t] + " ");
       newT = actualSolution[t];
+
     }while(t != newT);
     System.out.println();
 

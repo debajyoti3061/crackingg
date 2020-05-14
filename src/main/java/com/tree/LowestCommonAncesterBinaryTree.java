@@ -3,14 +3,15 @@ package com.tree;
 public class LowestCommonAncesterBinaryTree {
     static TreeNode1 root;
     public static void main(String args[]) {
-        root = new TreeNode1(7,
-                new TreeNode1(3,
-                        new TreeNode1(1, null, null), new TreeNode1(6, null, null)),
-                new TreeNode1(9,
-                        new TreeNode1(8, null, null), new TreeNode1(15,
-                        new TreeNode1(14, null, null), null)));
+        root = new TreeNode1(20,
+                new TreeNode1(8,
+                    new TreeNode1(4,null,null),
+                    new TreeNode1(12,
+                        new TreeNode1(10,null,null),
+                        new TreeNode1(14,null,null)))
+                ,new TreeNode1(22,null,null));
 
-       TreeNode1 common = lca(90,100);
+       TreeNode1 common = lca(10,14);
        if (common ==null) System.out.println("no common");
        else System.out.println(common.val);
     }

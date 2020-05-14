@@ -10,53 +10,39 @@ public class CourseSchedule2 {
         System.out.println(Arrays.toString(ans));
     }
     public static int[] findOrder(int numCourses, int[][] prerequisites) {
-    ArrayList[] adj = new ArrayList[numCourses];
-    int[] res = new int[numCourses];
-    Set hs = new HashSet();
-    int index = 0;
-
-    for(int i=0;i<numCourses;i++)
-        adj[i] = new ArrayList();
-
-    boolean[] visited = new boolean[numCourses];
-    for(int i=0; i<prerequisites.length;i++){
-        adj[prerequisites[i][0]].add(prerequisites[i][1]);
-    }
-
-    for(int i=0; i<numCourses; i++){
-        if(hs.contains(i))
-            continue;
+        ArrayList[] adj = new ArrayList[numCourses];
+        for (int i = 0; i < numCourses; i++)
+            adj[i] = new ArrayList();
+        boolean[] visited = new boolean[numCourses];
+        for (int i = 0; i < prerequisites.length; i++) {
+            adj[prerequisites[i][1]].add(prerequisites[i][0]);
+        }
         Stack stack = new Stack();
-        if(!dfs(adj,visited,i,stack,hs))
-            return (new int[0]);
-        while(stack.size()!=0){
-            int temp = (int)stack.pop();
-            if(!hs.contains(temp)){
-                res[index++] = temp;
-                hs.add(temp);
-            }
-        }
+        for (int i = 0; i < numCourses; i++)
+            if (visited[i] == false)
+                if (!topologicalSortUtil(i, visited, stack, adj, new boolean[numCourses]))
+                    return new int[0];
+        int[] res = new int[numCourses];
+        for (int i = 0; i < numCourses; i++)
+            res[i] = (int) stack.pop();
+
+        return res;
     }
-    return res;
-}
 
-    private static boolean dfs(ArrayList[] adj, boolean[] visited, int course, Stack stack, Set hs){
-        if(visited[course])
-            return false;
-        else{
-            if(hs.contains(course))
-                return true;
-            else{
-                stack.add(course);
-                visited[course] = true;
-            }
+    private static boolean topologicalSortUtil(int s, boolean[] visited, Stack stack, ArrayList[] adj, boolean[] seen) {
+        if (seen[s]) return false;
+        seen[s] = true;
+        Integer n;
+        Iterator<Integer> i = adj[s].iterator();
+        while (i.hasNext()) {
+            n = i.next();
+            if (!visited[n])
+                if (!topologicalSortUtil(n, visited, stack, adj, seen)) {
+                    return false;
+                }
         }
-
-        for(int i=0; i<adj[course].size();i++){
-            if(!dfs(adj,visited,(int)adj[course].get(i),stack,hs))
-                return false;
-        }
-        visited[course] = false;
+        visited[s] = true;
+        stack.push(new Integer(s));
         return true;
     }
 }
