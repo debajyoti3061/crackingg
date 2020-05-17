@@ -1,4 +1,4 @@
-package com.searching;
+package com.search;
 
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
@@ -11,7 +11,7 @@ public class WordBreak2 {
     Set<String> wordDict = new HashSet<String>(Arrays.asList(sourceArray));
     wordBreak(s,wordDict).stream().forEach(a-> System.out.println(a));
   }
-  public static List<String> wordBreak(String s, Set<String> wordDict) {
+  private static List<String> wordBreak(String s, Set<String> wordDict) {
     return DFS(s, wordDict, new HashMap<String, LinkedList<String>>());
   }
 
