@@ -8,8 +8,7 @@ public class IsBST {
                 new TreeNode1(3,
                         new TreeNode1(1, null, null), new TreeNode1(6, null, null)),
                 new TreeNode1(9,
-                        new TreeNode1(8, null, null), new TreeNode1(15,
-                                                                                        new TreeNode1(14, null, null), null)));
+                        new TreeNode1(8, null, null), new TreeNode1(15,new TreeNode1(14, null, null), null)));
 
         System.out.println(isBST(root));
 
@@ -21,7 +20,7 @@ public class IsBST {
 
     private static boolean isBST(TreeNode1 root, int minValue, int maxValue) {
         if (root == null) return true;
-        else  if (root.val <= minValue || root.val>= maxValue)
+        else  if (root.val <= minValue || root.val> maxValue)
             return false;
         return isBST(root.left,minValue,root.val) && isBST(root.right,root.val,maxValue);
     }

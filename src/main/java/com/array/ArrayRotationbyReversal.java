@@ -1,5 +1,7 @@
 package com.array;
 
+import java.util.Arrays;
+
 /**
  * o(n)
  * Let the array be arr[] = [1, 2, 3, 4, 5, 6, 7], d =2 and n = 7
@@ -50,6 +52,7 @@ public class ArrayRotationbyReversal {
   /* function to print an array */
   static void printArray(int arr[])
   {
+    System.out.println(Arrays.toString(arr));
       for (int anArr : arr) System.out.print(anArr + " ");
   }
 

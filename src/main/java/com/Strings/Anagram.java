@@ -9,7 +9,7 @@ public class Anagram {
 
   private static boolean isAnagram(String s, String t) {
     if(s.length()!=t.length()) return false;
-    System.out.println("hello "+ Arrays.equals(s.toCharArray(),t.toCharArray()));
+    //System.out.println("hello "+ Arrays.equals(s.toCharArray(),t.toCharArray()));
     int[] count= new int[26];
     for(int i=0;i<s.length();i++){
       count[s.charAt(i)-'a']++;

@@ -9,6 +9,7 @@ public class GroupedAnagram {
     public static void main(String[] args){
         String input[]={"eat", "tea", "tan", "ate", "nat", "bat"};
         List<List<String>> output =groupAnagrams(input);
+        output.stream().forEach(o-> System.out.println(o));
     }
 
     public static List<List<String>> groupAnagrams(String[] input) {

@@ -6,7 +6,7 @@ public class MirrorBinaryTree {
         root = new TreeNode1(1,
                 new TreeNode1(3,null,null),
                 new TreeNode1(2, new TreeNode1(5,null,null),new TreeNode1(4,null,null)));
-
+        root.preorder(root);
         mirror(root);
         root.preorder(root);
     }
