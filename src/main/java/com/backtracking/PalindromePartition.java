@@ -10,7 +10,7 @@ import java.util.List;
 public class PalindromePartition {
 
     public static void main(String args[]){
-        partition("aab").stream().forEach(x-> System.out.println(x));
+        partition("aaba").stream().forEach(x-> System.out.println(x));
     }
 
     public static  List<List<String>> partition(String s) {
