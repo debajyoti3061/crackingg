@@ -65,13 +65,13 @@ public class BreakWordDictionary {
 
     public static void main(String args[]){
         Set<String> dictionary = new HashSet<String>();
-        dictionary.add("I");
-        dictionary.add("would");
-        dictionary.add("like");
-        dictionary.add("had");
-        dictionary.add("play");
+        dictionary.add("apple");
+        dictionary.add("pen");
+        dictionary.add("applepen");
+        dictionary.add("pine");
+        dictionary.add("pineapple");
         dictionary.add("to");
-        String str = "Iliketoplay";
+        String str = "pineapplepenapple";
         BreakWordDictionary bmw = new BreakWordDictionary();
         String result1 = bmw.breakWordDP(str, dictionary);
 
