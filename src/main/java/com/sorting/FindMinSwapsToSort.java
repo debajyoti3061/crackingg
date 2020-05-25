@@ -19,8 +19,8 @@ public class FindMinSwapsToSort {
     for (int i = 0; i < n; i++) {
       ar[i] = m.get(ar[i]);
     }
-    //System.out.println(Arrays.toString(ar));
-    m = null;
+    System.out.println(Arrays.toString(ar));
+    //m = null;
     int swaps = 0;
     for (int i = 0; i < n; i++) {
       int val = ar[i];

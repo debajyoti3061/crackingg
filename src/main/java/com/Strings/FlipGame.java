@@ -6,7 +6,7 @@ import java.util.List;
 public class FlipGame {
 
   public static void main(String[] args){
-    List<String> output=generatePossibleNextMove("++--=-++-++--+-");
+    List<String> output=generatePossibleNextMove("++--+-++-++--+-");
     for(String o:output){
       System.out.println(o);
     }
