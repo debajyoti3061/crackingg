@@ -1,12 +1,12 @@
 package com.Strings;
 
 public class MinimumWindowSubString {
-    public static void main(String[] args){
-        System.out.println(minWindow("ADOBECODEBANC","ABC"));
+    public static void main(String[] args) {
+        System.out.println(minWindow("ADOBECODEBANC", "ABC"));
     }
 
     public static String minWindow(String s, String t) {
-        int [] map = new int[128];
+        int[] map = new int[128];
         for (char c : t.toCharArray()) {
             map[c]++;
         }
