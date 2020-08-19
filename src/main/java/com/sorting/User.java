@@ -40,6 +40,6 @@ public class User implements Comparable<User>{
 
     @Override
     public int compareTo(User u) {
-        return id-u.id;
+        return name.length()-u.name.length();
     }
 }

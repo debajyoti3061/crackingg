@@ -26,7 +26,7 @@ public class StringCombination_Subset {
 
   public static void main(String args[]){
     StringCombination_Subset c = new StringCombination_Subset();
-    c.combinationEasy("123".toCharArray());
+    c.combinationEasy("1123".toCharArray());
 
   }
 }

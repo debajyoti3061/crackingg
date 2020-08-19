@@ -5,7 +5,24 @@ public class FirstMissingPositive {
         int nums[]={3,4,-1,1};
         System.out.println(firstMissingPositive(nums));
     }
-    public static int firstMissingPositive(int[] nums) {
+    public static int firstMissingPositive(int[] A) {
+        int i = 0;
+        while(i < A.length){
+            if(A[i] == i+1 || A[i] <= 0 || A[i] > A.length) i++;
+            else if(A[A[i]-1] != A[i]) swap(A, i, A[i]-1);
+            else i++;
+        }
+        i = 0;
+        while(i < A.length && A[i] == i+1) i++;
+        return i+1;
+    }
+
+    private static void swap(int[] A, int i, int j){
+        int temp = A[i];
+        A[i] = A[j];
+        A[j] = temp;
+    }
+    public static int firstMissingPositive1(int[] nums) {
         int n = nums.length;
 
         // 1. mark numbers (num < 0) and (num > n) with a special marker number (n+1)

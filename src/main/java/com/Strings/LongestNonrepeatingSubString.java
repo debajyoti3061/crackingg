@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class LongestNonrepeatingSubString {
     public static void main(String args[]){
-        String x= "bbbbb";
+        String x= "babbbb";
         System.out.println(findlongest(x));
     }
 

@@ -8,8 +8,9 @@ import java.util.List;
 public class Combination_SumNoDups {
     //back trac
     public static void main(String[] args){
-        int[] nums={2,3,4,6,8};
-        List<List<Integer>> output = combinationSum2(nums,8);
+        int[] nums={1,0,1,2,1,4};
+
+        List<List<Integer>> output = combinationSum2(nums,6);
         output.stream().forEach(x-> System.out.println(x));
     }
 
@@ -17,6 +18,7 @@ public class Combination_SumNoDups {
         List<List<Integer>> list = new ArrayList<>();
         Arrays.sort(nums);
         backtrack(list, new ArrayList<>(), nums, target, 0);
+
         return list;
 
     }

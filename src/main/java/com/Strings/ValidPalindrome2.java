@@ -3,7 +3,7 @@ package com.Strings;
 public class ValidPalindrome2 {
 
   public static void main(String args[]){
-    System.out.println(isvalidPalindrome("aba"));
+    System.out.println(isvalidPalindrome("abab"));
   }
 
   private static boolean isvalidPalindrome(String input) {

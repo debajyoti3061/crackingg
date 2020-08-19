@@ -6,7 +6,7 @@ import java.util.List;
 public class Combination_SumDupAllowed {
     //back trac,
     public static void main(String[] args){
-        int[] nums={2,3,4};
+        int[] nums={2,3,4,1};
         List<List<Integer>> output = combinationSum(nums,8);
         output.stream().forEach(x-> System.out.println(x));
     }
