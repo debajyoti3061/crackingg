@@ -18,7 +18,7 @@ public class BitwiseOperation {
     c = a ^ b;        /* 49 = 0011 0001 */
     System.out.println("a ^ b = " + c );
     
-    ##hello
+    //##hello
 
     c = ~d;           /*-61 = 1100 0011  ~x== -x-1*/
     System.out.println("~d = " + c );

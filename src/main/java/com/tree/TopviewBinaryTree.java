@@ -4,7 +4,7 @@ import com.tree.TreeNode1;
 
 import java.util.*;
 
-public class TopviewBinaryTree {
+public class  TopviewBinaryTree {
   public static void main(String args[]) {
     TreeNode1 root;
     root = new TreeNode1(7,

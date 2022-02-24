@@ -2,6 +2,7 @@ package com.array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class MergeInterval {
@@ -17,7 +18,7 @@ public class MergeInterval {
     }
     public static int[][] merge(int[][] intervals) {
         if(intervals == null || intervals.length <= 1) return intervals;
-        Arrays.sort(intervals,(o1, o2)->Integer.compare(o1[0],o2[0]));
+        Arrays.sort(intervals, Comparator.comparingInt(o -> o[0]));
         int start = intervals[0][0];
         int end = intervals[0][1];
 

@@ -5,7 +5,7 @@ import java.util.Stack;
 public class AsteroidCollision {
 
   public static void main(String[] args){
-    int[] ast = {-2, -1, 1, 2};
+    int[] ast = {-2, 1, -1, 2};
     int result[] = asteroidCollision(ast);
     for(int i:result){
       System.out.println(i);

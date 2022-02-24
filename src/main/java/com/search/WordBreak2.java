@@ -1,7 +1,5 @@
 package com.search;
 
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
 import java.util.*;
 
 public class WordBreak2 {

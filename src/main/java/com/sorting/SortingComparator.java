@@ -5,8 +5,8 @@ import java.util.Comparator;
 
 public class SortingComparator {
     public static void main(String args[]){
-        String a[] = {"abc","skee","fdse","dsfu","aa"};
-        //Arrays.sort(a);
+        String a[] = {"abc","skee","fdsen","dsfu","aa"};
+        Arrays.sort(a);
         System.out.println(Arrays.toString(a));
 
         /*Arrays.sort(a, new Comparator<String>() {

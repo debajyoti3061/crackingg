@@ -3,7 +3,7 @@ package com.array;
 public class FirstMissingPositive {
     public static  void main(String[] args){
         int nums[]={3,4,-1,1};
-        System.out.println(firstMissingPositive(nums));
+        System.out.println(firstMissingPositive1(nums));
     }
     public static int firstMissingPositive(int[] A) {
         int i = 0;

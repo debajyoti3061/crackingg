@@ -2,7 +2,8 @@ package com.array;
 
 import java.util.*;
 
-public class MeetinRoom {
+public class
+MeetinRoom {
 
   public static void main(String[] args){
     int[][] input={{0,30},{35,45},{20,40}};
@@ -11,7 +12,7 @@ public class MeetinRoom {
   }
 
   private static int findsize(int[][] input) {
-    Arrays.sort(input, (o1, o2) -> Integer.compare(o1[0],o2[0]));
+    Arrays.sort(input, Comparator.comparingInt(o -> o[0]));
 
     /**Arrays.sort(input, new Comparator<int[]>() {
       @Override

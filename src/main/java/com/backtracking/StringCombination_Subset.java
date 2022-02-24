@@ -6,7 +6,7 @@ public class StringCombination_Subset {
 
   public void combinationEasy(char[] input) {
     List<Character> r = new ArrayList<>();
-    Arrays.sort(input);
+    //Arrays.sort(input);
     backtrack(input, 0, r);
   }
 
@@ -26,7 +26,7 @@ public class StringCombination_Subset {
 
   public static void main(String args[]){
     StringCombination_Subset c = new StringCombination_Subset();
-    c.combinationEasy("1123".toCharArray());
+    c.combinationEasy("1231".toCharArray());
 
   }
 }

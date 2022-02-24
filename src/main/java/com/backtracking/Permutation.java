@@ -7,7 +7,7 @@ import java.util.List;
 public class Permutation {
     static List<List<Integer>> list = new ArrayList<>();
     public static void main(String[] args){
-        int nums[]={1,2,0};
+        int nums[]={1,2,0,1};
         permuteUnique(nums).stream().forEach(System.out::println);
     }
 

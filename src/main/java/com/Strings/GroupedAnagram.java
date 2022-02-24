@@ -13,7 +13,6 @@ public class GroupedAnagram {
     }
 
     public static List<List<String>> groupAnagrams(String[] input) {
-        List<String> res = new ArrayList<>();
         // if(strs.length() == 0) return res;
         HashMap<String,List> map = new HashMap<>();
         for(String s : input) {

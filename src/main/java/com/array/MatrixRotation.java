@@ -1,5 +1,7 @@
 package com.array;
 
+import java.util.Arrays;
+
 /**
  * The idea was firstly transpose the matrix and then flip it symmetrically. For instance,
 
@@ -20,10 +22,15 @@ package com.array;
 public class MatrixRotation {
     public static void main(String[] args){
         int matrix[][]={{1,2,3},{4,5,6},{7,8,9}};
-        rotate90degreeleft(matrix);
+        int result[][] = rotate90degreeleft(matrix);
+        Arrays.stream(result).forEach(a-> {
+            for(int i = 0; i< a.length;i++){
+                System.out.print(a[i]+ " ");
+            }
+        });
     }
 
-    private static void rotate90degreeleft(int[][] matrix) {
+    private static int[][] rotate90degreeleft(int[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < i; j++) {
                 int temp = matrix[i][j];
@@ -40,5 +47,6 @@ public class MatrixRotation {
                 matrix[i][matrix.length-1-j] = temp;
             }
         }
+        return matrix;
     }
 }
