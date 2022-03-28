@@ -1,14 +1,12 @@
 package com.Strings;
 
-import org.junit.Assert;
-
 import java.util.*;
 
 public class TreeFormat {
     public static void main(String[] args) {
         TreeFormat tf = new TreeFormat();
-        Assert.assertEquals(Arrays.asList(new String[]{"Ann", "- Max", "-- Tom", "- Jim"}), tf.getEmployeeLevel("1:Max:4, 4:Ann:0, 2:Jim:4, 3:Tom:1"));
-        Assert.assertEquals(Arrays.asList(new String[]{"Ann", "- Alb", "- Edmond", "-- Max", "Bruce"}), tf.getEmployeeLevel("1:Max:4, 2:Ann:0, 3:Alb:2, 4:Edmond:2, 5:Bruce:0"));
+       // Assert.assertEquals(Arrays.asList(new String[]{"Ann", "- Max", "-- Tom", "- Jim"}), tf.getEmployeeLevel("1:Max:4, 4:Ann:0, 2:Jim:4, 3:Tom:1"));
+       // Assert.assertEquals(Arrays.asList(new String[]{"Ann", "- Alb", "- Edmond", "-- Max", "Bruce"}), tf.getEmployeeLevel("1:Max:4, 2:Ann:0, 3:Alb:2, 4:Edmond:2, 5:Bruce:0"));
     }
 
     private List<String> getEmployeeLevel(String s) {
